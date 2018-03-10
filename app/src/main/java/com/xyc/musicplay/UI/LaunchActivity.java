@@ -10,12 +10,20 @@ public class LaunchActivity extends BaseActivity {
 
     @Override
     protected void initHeader() {
-      setHeaderVisibility(View.GONE);
+        setHeaderVisibility(View.GONE);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setCenterView(R.layout.activity_launch);
+        initData();
+    }
+
+    private void initData() {
+
+        startActivity(MainActivity.makeIntent(this));
+        overridePendingTransition(R.anim.go_in, R.anim.go_out);
+        finish();
     }
 }

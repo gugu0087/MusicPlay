@@ -29,6 +29,6 @@ dependencies {
     compile 'com.github.gugu0087:GuOkhttps:1.1.0'
     compile 'com.github.gugu0087:GuUtils:2.3.1'
     compile 'com.airbnb.android:lottie:2.0.0-beta4'
-    compile 'com.github.gugu0087:GuViews:1.0.1'
+    compile 'com.github.gugu0087:GuViews:1.0.2'
     testCompile 'junit:junit:4.12'
 }

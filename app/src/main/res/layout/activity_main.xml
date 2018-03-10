@@ -1,18 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.xyc.musicplay.UI.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/ivBgUser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/slogan_bg"
+        android:scaleType="centerCrop" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvMusicName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="十面埋伏"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/ivPlayLogo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/tvMusicName"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/player_cover" />
+
+
+    <LinearLayout
+        android:id="@+id/rlBottomBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivLastMusic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_play_left" />
+
+        <ImageView
+            android:id="@+id/ivPauseMusic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_play_stop" />
+
+        <ImageView
+            android:id="@+id/ivNextMusic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_play_right" />
+
+    </LinearLayout>
+
+    <com.xyc.guguviews.views.PullListView
+        android:id="@+id/pullListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rlBottomBtn"
+        android:layout_below="@id/ivPlayLogo"
+        android:layout_marginTop="10dp">
+
+    </com.xyc.guguviews.views.PullListView>
+
+</RelativeLayout>
